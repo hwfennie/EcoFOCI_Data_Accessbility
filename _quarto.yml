@@ -4,8 +4,8 @@ project:
 website: 
   page-navigation: true
   title: "EcoFOCI Data Access Guide" 
-  site-url: "https://nmfs-opensci.github.io/NOAA-quarto-simple" 
-  repo-url: "https://github.com/nmfs-opensci/NOAA-quarto-simple"
+  site-url: "https://github.com/hwfennie/EcoFOCI_Data_Accessbility" 
+  repo-url: "https://github.com/hwfennie/EcoFOCI_Data_Accessbility"
   repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
   
