@@ -4,7 +4,7 @@ project:
 website: 
   page-navigation: true
   title: "EcoFOCI Data Access Guide" 
-  site-url: "https://github.com/hwfennie/EcoFOCI_Data_Accessbility" 
+  site-url: "https://hwfennie.github.io/EcoFOCI_Data_Accessbility" 
   repo-url: "https://github.com/hwfennie/EcoFOCI_Data_Accessbility"
   repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
