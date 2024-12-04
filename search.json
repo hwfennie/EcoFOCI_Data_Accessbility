@@ -60,73 +60,33 @@
     ]
   },
   {
-    "objectID": "content/acknowledgements.html",
-    "href": "content/acknowledgements.html",
-    "title": "Acknowledgments",
+    "objectID": "content/customizing.html",
+    "href": "content/customizing.html",
+    "title": "Customization",
     "section": "",
-    "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland.",
+    "text": "Quarto allow many bells and whistles to make nice output. Read the documentation here Quarto documentation.",
     "crumbs": [
-      "Acknowledgements"
+      "Customizing"
     ]
   },
   {
-    "objectID": "content/code.html",
-    "href": "content/code.html",
-    "title": "Rendering with Code",
+    "objectID": "content/customizing.html#quarto-documentation",
+    "href": "content/customizing.html#quarto-documentation",
+    "title": "Customization",
     "section": "",
-    "text": "You can have code (R, Python or Julia) in your qmd file. You will need to have these installed on your local computer, but presumably you do already if you are adding code to your qmd files.\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326",
+    "text": "Quarto allow many bells and whistles to make nice output. Read the documentation here Quarto documentation.",
     "crumbs": [
-      "Code in your files"
+      "Customizing"
     ]
   },
   {
-    "objectID": "content/code.html#modify-the-github-action",
-    "href": "content/code.html#modify-the-github-action",
-    "title": "Rendering with Code",
-    "section": "Modify the GitHub Action",
-    "text": "Modify the GitHub Action\nYou will need to change the GitHub Action in .github/workflows to install these and any needed packages in order for GitHub to be able to render your webpage. The GitHub Action install R since I used that in code.qmd. If you use Python or Julia instead, then you will need to update the GitHub Action to install those.\nIf getting the GitHub Action to work is too much hassle (and that definitely happens), you can alway render locally and publish to the gh-pages branch. If you do this, make sure to delete or rename the GitHub Action to something like\nrender-and-publish.old_yml\nso GitHub does not keep trying to run it. Nothing bad will happen if you don’t do this, but if you are not using the action (because it keeps failing), then you don’t need GitHub to run it.",
+    "objectID": "content/customizing.html#examples",
+    "href": "content/customizing.html#examples",
+    "title": "Customization",
+    "section": "Examples",
+    "text": "Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory.",
     "crumbs": [
-      "Code in your files"
-    ]
-  },
-  {
-    "objectID": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
-    "href": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
-    "title": "Rendering with Code",
-    "section": "Render locally and publish to gh-pages branch",
-    "text": "Render locally and publish to gh-pages branch\nTo render locally and push up to the gh-pages branch, open a terminal window and then cd to the directory with the Quarto project. Type this in the terminal:\nquarto render gh-pages",
-    "crumbs": [
-      "Code in your files"
-    ]
-  },
-  {
-    "objectID": "content/rmarkdown.html",
-    "href": "content/rmarkdown.html",
-    "title": "R Markdown",
-    "section": "",
-    "text": "You can include R Markdown files in your project.",
-    "crumbs": [
-      "R Markdown files"
-    ]
-  },
-  {
-    "objectID": "content/rmarkdown.html#r-markdown",
-    "href": "content/rmarkdown.html#r-markdown",
-    "title": "R Markdown",
-    "section": "R Markdown",
-    "text": "R Markdown\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00",
-    "crumbs": [
-      "R Markdown files"
-    ]
-  },
-  {
-    "objectID": "content/rmarkdown.html#including-plots",
-    "href": "content/rmarkdown.html#including-plots",
-    "title": "R Markdown",
-    "section": "Including Plots",
-    "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.",
-    "crumbs": [
-      "R Markdown files"
+      "Customizing"
     ]
   },
   {
@@ -160,34 +120,102 @@
     ]
   },
   {
-    "objectID": "content/customizing.html",
-    "href": "content/customizing.html",
-    "title": "Customization",
+    "objectID": "content/rmarkdown.html",
+    "href": "content/rmarkdown.html",
+    "title": "R Markdown",
     "section": "",
-    "text": "Quarto allow many bells and whistles to make nice output. Read the documentation here Quarto documentation.",
+    "text": "You can include R Markdown files in your project.",
     "crumbs": [
-      "Customizing"
+      "R Markdown files"
     ]
   },
   {
-    "objectID": "content/customizing.html#quarto-documentation",
-    "href": "content/customizing.html#quarto-documentation",
-    "title": "Customization",
-    "section": "",
-    "text": "Quarto allow many bells and whistles to make nice output. Read the documentation here Quarto documentation.",
+    "objectID": "content/rmarkdown.html#r-markdown",
+    "href": "content/rmarkdown.html#r-markdown",
+    "title": "R Markdown",
+    "section": "R Markdown",
+    "text": "R Markdown\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00",
     "crumbs": [
-      "Customizing"
+      "R Markdown files"
     ]
   },
   {
-    "objectID": "content/customizing.html#examples",
-    "href": "content/customizing.html#examples",
-    "title": "Customization",
-    "section": "Examples",
-    "text": "Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory.",
+    "objectID": "content/rmarkdown.html#including-plots",
+    "href": "content/rmarkdown.html#including-plots",
+    "title": "R Markdown",
+    "section": "Including Plots",
+    "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.",
     "crumbs": [
-      "Customizing"
+      "R Markdown files"
     ]
+  },
+  {
+    "objectID": "content/code.html",
+    "href": "content/code.html",
+    "title": "Rendering with Code",
+    "section": "",
+    "text": "You can have code (R, Python or Julia) in your qmd file. You will need to have these installed on your local computer, but presumably you do already if you are adding code to your qmd files.\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326",
+    "crumbs": [
+      "Code in your files"
+    ]
+  },
+  {
+    "objectID": "content/code.html#modify-the-github-action",
+    "href": "content/code.html#modify-the-github-action",
+    "title": "Rendering with Code",
+    "section": "Modify the GitHub Action",
+    "text": "Modify the GitHub Action\nYou will need to change the GitHub Action in .github/workflows to install these and any needed packages in order for GitHub to be able to render your webpage. The GitHub Action install R since I used that in code.qmd. If you use Python or Julia instead, then you will need to update the GitHub Action to install those.\nIf getting the GitHub Action to work is too much hassle (and that definitely happens), you can alway render locally and publish to the gh-pages branch. If you do this, make sure to delete or rename the GitHub Action to something like\nrender-and-publish.old_yml\nso GitHub does not keep trying to run it. Nothing bad will happen if you don’t do this, but if you are not using the action (because it keeps failing), then you don’t need GitHub to run it.",
+    "crumbs": [
+      "Code in your files"
+    ]
+  },
+  {
+    "objectID": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
+    "href": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
+    "title": "Rendering with Code",
+    "section": "Render locally and publish to gh-pages branch",
+    "text": "Render locally and publish to gh-pages branch\nTo render locally and push up to the gh-pages branch, open a terminal window and then cd to the directory with the Quarto project. Type this in the terminal:\nquarto render gh-pages",
+    "crumbs": [
+      "Code in your files"
+    ]
+  },
+  {
+    "objectID": "content/acknowledgements.html",
+    "href": "content/acknowledgements.html",
+    "title": "Acknowledgments",
+    "section": "",
+    "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "content/Larval Catch Query Template Page.html",
+    "href": "content/Larval Catch Query Template Page.html",
+    "title": "Larval Catch Query Template",
+    "section": "",
+    "text": "require(RODBC)\n{user &lt;- readline(\"Input Username: \")\npswd &lt;- readline(\"Input Password: \")}\n\nAFSCconnect &lt;- odbcConnect(\"AFSC\", uid=user,  pwd=pswd)#pass your stored username and password from above to this function to access EcoDAAT."
+  },
+  {
+    "objectID": "content/Larval Catch Query Template Page.html#to-access-ecodaat-the-database-for-all-foci-data-you-will-need-to-login-to-sql-developer-using-your-credentials.-use-the-following-packages-and-code",
+    "href": "content/Larval Catch Query Template Page.html#to-access-ecodaat-the-database-for-all-foci-data-you-will-need-to-login-to-sql-developer-using-your-credentials.-use-the-following-packages-and-code",
+    "title": "Larval Catch Query Template",
+    "section": "",
+    "text": "require(RODBC)\n{user &lt;- readline(\"Input Username: \")\npswd &lt;- readline(\"Input Password: \")}\n\nAFSCconnect &lt;- odbcConnect(\"AFSC\", uid=user,  pwd=pswd)#pass your stored username and password from above to this function to access EcoDAAT."
+  },
+  {
+    "objectID": "content/Larval Catch Query Template Page.html#query-ecodaat-example",
+    "href": "content/Larval Catch Query Template Page.html#query-ecodaat-example",
+    "title": "Larval Catch Query Template",
+    "section": "Query EcoDAAT example",
+    "text": "Query EcoDAAT example"
+  },
+  {
+    "objectID": "content/Larval Catch Query Template Page.html#here-is-an-example-of-a-query-for-larval-catch-data.",
+    "href": "content/Larval Catch Query Template Page.html#here-is-an-example-of-a-query-for-larval-catch-data.",
+    "title": "Larval Catch Query Template",
+    "section": "Here is an example of a query for larval catch data.",
+    "text": "Here is an example of a query for larval catch data.\n\nUse the paste0 function to “SELECT” the appropriate aspects of the query.\n\nYou can copy and paste the code below to replicate this query. Additionally, the bullet point below describe the different aspects of the query and are locations where you can modify the code based on your specific goals.\n\n\nNote: Need more info about exactly what all goes into the paste0 function. Why is this all in quotes instead of in some sort of functional notation?\n\nFirst choose the header columns needed: “SELECT COMMENTS_SPECIMEN,…, YEAR\n\nMake a table with all of the header columns and link it here\n\nThen select which EcoDAAT database to pull from: ECODAAT_DEV.SPECIMEN_MAIN_GEOM\n\nBecause we are looking at larval fish catch data, we want to select the 60cm Bongo net by calling: WHERE GEAR_NAME LIKE ‘60BON’\nIf you were interested in large zooplankton, you would also want the 60BON, but if you were interested in smaller zooplankton, you’d want the 20BON. More info on that here: still need to make this new page\n\nNext, select the stage we are interested in (larval stage = stage 6): STAGE_ID=6\n\nNeed to insert a link to a page with information about larval fish stages here\n\nTo include a list species we want to gather larval catch data for: SPECIES_NAME IN (‘Ammodytes personatus’,…,‘Stenobrachius leucopsarus’)\n\nLink a table with a list of all species here\n\nTo determine which of the two bongo nets to get data from, choose the primary net with: PRIMARY_NET IN(‘Y’)\n\nInclude a description of the differences between primary and secondary bongo nets here\n\nTo select on the hauls that have good or questionable performance (hauls that did not have major deployment issues): HAUL_PERFORMANCE IN(‘GOOD’,‘QUEST’)\n\nInclude a description of the differences between haul performance categories here\n\nLarval catch data is collected from hauls with the “GRID” designation. Select these hauls with: PURPOSE IN(‘GRID’)\n\nInclude a description of the different types of cruises here\n\nTo include a list of the cruises you want to gather data from, use: CRUISE IN(‘3SH81’,… ‘DY23-07’)”\n\nInclude a description of the cruises here\nOur earliest cruise with larval abundance data is 3SH81 (from 1981) and our most recent cruise is DY23-07 (2023).\n\n\n\nBonSampleQuery &lt;-   \n  paste0(\n    \"SELECT \n    COMMENTS_SPECIMEN, \n    COMMON_NAME_ICHBASE, \n    CRUISE, GMT_DATE_TIME, \n    HAUL_ID, LARVALCATCHPER1000M3, \n    LARVALCATCHPER10M2,\n    LAT,\n    LON, \n    NET, \n    NUMBER_CAUGHT, \n    POLYGONAL_AREA, \n    PRIMARY_NET, \n    PURPOSE, \n    SPECIES_NAME, \n    STATION_NAME, \n    YEAR\n  \n  FROM ECODAAT_DEV.SPECIMEN_MAIN_GEOM \n  \n  WHERE GEAR_NAME LIKE '60BON' AND\n  \n    STAGE_ID=6 AND  \n    \n    SPECIES_NAME IN ('Ammodytes personatus',\n    'Atheresthes stomias',\n    'Bathymaster spp.',\n    'Gadus chalcogrammus',\n    'Gadus macrocephalus',\n    'Hippoglossoides elassodon',\n    'Hippoglossus stenolepis',\n    'Lepidopsetta bilineata',\n    'Lepidopsetta polyxystra',\n    'Platichthys stellatus',\n    'Sebastes spp.',\n    'Stenobrachius leucopsarus') AND\n    \n    PRIMARY_NET IN('Y') AND\n    \n    HAUL_PERFORMANCE IN('GOOD','QUEST') AND\n    \n    PURPOSE IN('GRID') AND\n    \n    CRUISE IN('3SH81', \n    '4MF81', \n    '2DA82', \n    '1CH83', \n    '2PO85', \n    '3MF87', \n    '4MF90', \n    '4MF91', \n    '4MF92', \n    '5MF93', \n    '6MF94', \n    '8MF95', \n    '8MF96', \n    '8MF97',\n    '5MF98', \n    '2WE99', \n    '5MF99', \n    '6MF00', \n    '3MF01', \n    '4MF02', \n    '5MF03', \n    '5MF04', \n    '6MF05', \n    '4MF06', \n    '5MF07', \n    '4DY08', \n    '4DY09', \n    '3DY10',\n    '2DY11', \n    'DY13-06', \n    'DY15-05', \n    'DY17-05', \n    'DY19-05', \n    'WO21-01',\n    'DY23-07')\"\n    ) \n\nsamples.bongo&lt;-sqlQuery(AFSCconnect,BonSampleQuery)   ## Header of larval catch data. - Need to figure out how to add the header information without actually executing the code.  head(samples.bongo)"
   },
   {
     "objectID": "content/publishing.html",
