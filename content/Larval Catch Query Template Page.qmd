@@ -1,0 +1,130 @@
+---
+title: "Larval Catch Query Template"
+---
+
+## To Access EcoDAAT (the database for all FOCI data) you will need to login to sql developer using your credentials. Use the following packages and code:
+
+```{r}
+#| echo: true 
+#| #| eval: false 
+require(RODBC)
+{user <- readline("Input Username: ")
+pswd <- readline("Input Password: ")}
+
+AFSCconnect <- odbcConnect("AFSC", uid=user,  pwd=pswd)#pass your stored username and password from above to this function to access EcoDAAT.
+```
+
+## Query EcoDAAT example
+
+## Here is an example of a query for larval catch data.
+
+#### Use the paste0 function to "SELECT" the appropriate aspects of the query.
+
+###### You can copy and paste the code below to replicate this query. Additionally, the bullet point below describe the different aspects of the query and are locations where you can modify the code based on your specific goals.
+
+###### Note: Need more info about exactly what all goes into the paste0 function. Why is this all in quotes instead of in some sort of functional notation?
+
+-   First choose the header columns needed: ["SELECT COMMENTS_SPECIMEN,..., YEAR]{style="color: red"}
+    -   Make a table with all of the header columns and link it [here]{style="color: blue"}
+-   Then select which EcoDAAT database to pull from: [ECODAAT_DEV.SPECIMEN_MAIN_GEOM]{style="color: red"}
+    -   Because we are looking at larval fish catch data, we want to select the 60cm Bongo net by calling: [WHERE GEAR_NAME LIKE '60BON']{style="color: red"}
+    -   If you were interested in large zooplankton, you would also want the 60BON, but if you were interested in smaller zooplankton, you'd want the 20BON. More info on that [here: still need to make this new page]{style="color: blue"}
+-   Next, select the stage we are interested in (larval stage = stage 6): STAGE_ID=6
+    -   Need to insert a link to a page with information about larval fish stages [here]{style="color: blue"}
+-   To include a list species we want to gather larval catch data for: [SPECIES_NAME IN ('Ammodytes personatus',...,'Stenobrachius leucopsarus')]{style="color: red"}
+    -   Link a table with a list of all species [here]{style="color: blue"}
+-   To determine which of the two bongo nets to get data from, choose the primary net with: [PRIMARY_NET IN('Y')]{style="color: red"}
+    -   Include a description of the differences between primary and secondary bongo nets [here]{style="color: blue"}
+-   To select on the hauls that have good or questionable performance (hauls that did not have major deployment issues): [HAUL_PERFORMANCE IN('GOOD','QUEST')]{style="color: red"}
+    -   Include a description of the differences between haul performance categories [here]{style="color: blue"}
+-   Larval catch data is collected from hauls with the "GRID" designation. Select these hauls with: [PURPOSE IN('GRID')]{style="color: red"}
+    -   Include a description of the different types of cruises [here]{style="color: blue"}
+-   To include a list of the cruises you want to gather data from, use: [CRUISE IN('3SH81',... 'DY23-07')"]{style="color: red"}
+    -   Include a description of the cruises [here]{style="color: blue"}
+    -   Our earliest cruise with larval abundance data is 3SH81 (from 1981) and our most recent cruise is DY23-07 (2023).
+
+```{r}
+#| eval: false 
+BonSampleQuery <-   
+  paste0(
+    "SELECT 
+    COMMENTS_SPECIMEN, 
+    COMMON_NAME_ICHBASE, 
+    CRUISE, GMT_DATE_TIME, 
+    HAUL_ID, LARVALCATCHPER1000M3, 
+    LARVALCATCHPER10M2,
+    LAT,
+    LON, 
+    NET, 
+    NUMBER_CAUGHT, 
+    POLYGONAL_AREA, 
+    PRIMARY_NET, 
+    PURPOSE, 
+    SPECIES_NAME, 
+    STATION_NAME, 
+    YEAR
+  
+  FROM ECODAAT_DEV.SPECIMEN_MAIN_GEOM 
+  
+  WHERE GEAR_NAME LIKE '60BON' AND
+  
+    STAGE_ID=6 AND  
+    
+    SPECIES_NAME IN ('Ammodytes personatus',
+    'Atheresthes stomias',
+    'Bathymaster spp.',
+    'Gadus chalcogrammus',
+    'Gadus macrocephalus',
+    'Hippoglossoides elassodon',
+    'Hippoglossus stenolepis',
+    'Lepidopsetta bilineata',
+    'Lepidopsetta polyxystra',
+    'Platichthys stellatus',
+    'Sebastes spp.',
+    'Stenobrachius leucopsarus') AND
+    
+    PRIMARY_NET IN('Y') AND
+    
+    HAUL_PERFORMANCE IN('GOOD','QUEST') AND
+    
+    PURPOSE IN('GRID') AND
+    
+    CRUISE IN('3SH81', 
+    '4MF81', 
+    '2DA82', 
+    '1CH83', 
+    '2PO85', 
+    '3MF87', 
+    '4MF90', 
+    '4MF91', 
+    '4MF92', 
+    '5MF93', 
+    '6MF94', 
+    '8MF95', 
+    '8MF96', 
+    '8MF97',
+    '5MF98', 
+    '2WE99', 
+    '5MF99', 
+    '6MF00', 
+    '3MF01', 
+    '4MF02', 
+    '5MF03', 
+    '5MF04', 
+    '6MF05', 
+    '4MF06', 
+    '5MF07', 
+    '4DY08', 
+    '4DY09', 
+    '3DY10',
+    '2DY11', 
+    'DY13-06', 
+    'DY15-05', 
+    'DY17-05', 
+    'DY19-05', 
+    'WO21-01',
+    'DY23-07')"
+    ) 
+
+samples.bongo<-sqlQuery(AFSCconnect,BonSampleQuery)   ## Header of larval catch data. - Need to figure out how to add the header information without actually executing the code.  head(samples.bongo)
+```
