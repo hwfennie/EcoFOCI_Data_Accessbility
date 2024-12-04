@@ -1,1 +1,1 @@
-Sitemap: https://github.com/hwfennie/EcoFOCI_Data_Accessbility/sitemap.xml
+Sitemap: https://hwfennie.github.io/EcoFOCI_Data_Accessbility/sitemap.xml
