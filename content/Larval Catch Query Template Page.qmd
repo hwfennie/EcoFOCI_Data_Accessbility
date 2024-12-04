@@ -6,7 +6,7 @@ title: "Larval Catch Query Template"
 
 ```{r}
 #| echo: true 
-#| #| eval: false 
+#| eval: false 
 require(RODBC)
 {user <- readline("Input Username: ")
 pswd <- readline("Input Password: ")}
